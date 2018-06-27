@@ -8,7 +8,7 @@ class Anagram
   def match(anagram_array)
     word_sorted = self.word.split('').sort.join
 
-    anagram_array.find do |possible_anagram|
+    anagram_array.select do |possible_anagram|
       possible_anagram_sorted = possible_anagram.split('').sort.join
       word_sorted == possible_anagram_sorted
     end
